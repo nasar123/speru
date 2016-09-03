@@ -165,5 +165,16 @@
             <script src="js/slidebars.min.js"></script>
             <!--common script for all pages-->
             <script src="js/common-scripts.js"></script>
+            
+            <script>
+$(document).ready(function(){
+	var images = $('img');
+	images.each(images, function(){
+		var srcArray = $(this).attr('src').split('/');
+		var imageSource = "/assets/" + srcArray[srcArray.length -1];
+		$(this).attr('src', imageSource);
+	})
+});
+</script>
 </section>
 </body>
